@@ -36,7 +36,7 @@ CREATE TABLE versions (
     CONSTRAINT version_pk PRIMARY KEY (id),
     CONSTRAINT version_song_fk FOREIGN KEY (song_id) REFERENCES songs(id),
     CONSTRAINT version_user_fk FOREIGN KEY (user_id) REFERENCES users(id),
-    CONSTRAINT version_tab_file_fk FOREIGN KEY (user_id) REFERENCES files(id),
-    CONSTRAINT version_audio_file_fk FOREIGN KEY (user_id) REFERENCES files(id)
+    CONSTRAINT version_tab_file_fk FOREIGN KEY (tab_file_id) REFERENCES files(id),
+    CONSTRAINT version_audio_file_fk FOREIGN KEY (audio_file_id) REFERENCES files(id)
 );
 
